@@ -7,7 +7,7 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Page Header -->
+  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <h1 class="site-title">Virtual Dog Park</h1>
@@ -16,7 +16,7 @@
   </header>
 
   <main class="container">
-    <!-- Dog Encyclopedia Section -->
+    <!-- Section 1: Dog Encyclopedia -->
     <section id="encyclopedia" class="encyclopedia-section">
       <div class="section-intro">
         <h2>Dog Encyclopedia</h2>
@@ -24,9 +24,8 @@
       </div>
 
       <div class="breed-grid">
-        <!-- Beagle -->
         <article class="breed-card">
-          <div class="illustration-container">
+          <div class="illustration-container bg-beagle">
             <img src="assets/beagle.svg" alt="Illustration of a Beagle">
           </div>
           <div class="breed-info">
@@ -47,9 +46,8 @@
           </div>
         </article>
 
-        <!-- Golden Retriever -->
         <article class="breed-card">
-          <div class="illustration-container">
+          <div class="illustration-container bg-golden">
             <img src="assets/golden-retriever.svg" alt="Illustration of a Golden Retriever">
           </div>
           <div class="breed-info">
@@ -70,9 +68,8 @@
           </div>
         </article>
 
-        <!-- Poodle -->
         <article class="breed-card">
-          <div class="illustration-container">
+          <div class="illustration-container bg-poodle">
             <img src="assets/poodle.svg" alt="Illustration of a Poodle">
           </div>
           <div class="breed-info">
@@ -95,8 +92,85 @@
       </div>
     </section>
 
-    <!-- Mount point for Round 2 and Round 3 interactive features -->
-    <section id="virtual-dog-section" class="virtual-dog-section"></section>
+    <!-- Section 2: My Virtual Dog -->
+    <section id="virtual-dog-section" class="virtual-dog-section">
+      <div class="section-intro">
+        <span class="section-number">02</span>
+        <h2>My Virtual Dog</h2>
+        <p>Choose a new friend, give them a name, and care for them.</p>
+      </div>
+
+      <div class="pet-workflow-grid">
+        <!-- Adoption Form Card -->
+        <div class="card form-card">
+          <form id="adoption-form" novalidate>
+            <div class="form-group">
+              <label for="breed-select" class="form-label">CHOOSE A BREED</label>
+              <select id="breed-select" class="form-input">
+                <option value="Beagle">Beagle</option>
+                <option value="Golden Retriever">Golden Retriever</option>
+                <option value="Poodle">Poodle</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="dog-name-input" class="form-label">DOG NAME</label>
+              <input 
+                type="text" 
+                id="dog-name-input" 
+                class="form-input" 
+                maxlength="20" 
+                placeholder="e.g. Buddy"
+                autocomplete="off"
+              >
+              <span class="input-hint">Enter 1–20 characters. Spaces inside the name are welcome.</span>
+              <p id="form-error" class="form-error" aria-live="polite"></p>
+            </div>
+
+            <button type="submit" id="adopt-btn" class="btn btn-primary">Adopt</button>
+          </form>
+        </div>
+
+        <!-- Pet Status Dashboard Card -->
+        <div id="pet-dashboard" class="card pet-card hidden">
+          <div class="pet-card-top-bar"></div>
+          <span class="pet-meta-subhead">YOUR NEW PARK FRIEND</span>
+          <h3 id="display-name" class="pet-display-name"></h3>
+
+          <div class="pet-details-grid">
+            <div class="detail-item">
+              <span class="label">BREED</span>
+              <p id="display-breed">-</p>
+            </div>
+            <div class="detail-item">
+              <span class="label">DAY</span>
+              <p id="display-day">-</p>
+            </div>
+            <div class="detail-item">
+              <span class="label">GROWTH STAGE</span>
+              <p id="display-stage">-</p>
+            </div>
+            <div class="detail-item">
+              <span class="label">HAPPINESS</span>
+              <p id="display-happiness">-</p>
+            </div>
+          </div>
+
+          <!-- Happiness Gauge Bar -->
+          <div class="happiness-bar-container">
+            <div id="happiness-bar" class="happiness-bar"></div>
+          </div>
+
+          <!-- Care Controls -->
+          <div class="pet-actions">
+            <button type="button" id="feed-btn" class="btn btn-secondary">Feed</button>
+            <button type="button" id="play-btn" class="btn btn-secondary">Play</button>
+          </div>
+
+          <p id="pet-message" class="pet-message"></p>
+        </div>
+      </div>
+    </section>
   </main>
 
   <script src="script.js"></script>
