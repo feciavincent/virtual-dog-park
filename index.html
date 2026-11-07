@@ -7,7 +7,6 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Header -->
   <header class="site-header">
     <div class="container">
       <h1 class="site-title">Virtual Dog Park</h1>
@@ -102,7 +101,7 @@
 
       <div class="pet-workflow-grid">
         <!-- Adoption Form Card -->
-        <div class="card form-card">
+        <div id="adoption-card" class="card form-card">
           <form id="adoption-form" novalidate>
             <div class="form-group">
               <label for="breed-select" class="form-label">CHOOSE A BREED</label>
@@ -134,37 +133,37 @@
         <!-- Pet Status Dashboard Card -->
         <div id="pet-dashboard" class="card pet-card hidden">
           <div class="pet-card-top-bar"></div>
-          <span class="pet-meta-subhead">YOUR NEW PARK FRIEND</span>
-          <h3 id="display-name" class="pet-display-name"></h3>
+          
+          <div class="pet-display-layout">
+            <!-- Dynamic Avatar scaled by Growth Stage -->
+            <div class="pet-avatar-wrapper">
+              <img id="pet-avatar" src="assets/beagle.svg" alt="Adopted dog illustration" class="stage-puppy">
+            </div>
 
-          <div class="pet-details-grid">
-            <div class="detail-item">
-              <span class="label">BREED</span>
-              <p id="display-breed">-</p>
-            </div>
-            <div class="detail-item">
-              <span class="label">DAY</span>
-              <p id="display-day">-</p>
-            </div>
-            <div class="detail-item">
-              <span class="label">GROWTH STAGE</span>
-              <p id="display-stage">-</p>
-            </div>
-            <div class="detail-item">
-              <span class="label">HAPPINESS</span>
-              <p id="display-happiness">-</p>
+            <!-- Dog Stats -->
+            <div class="pet-stats-panel">
+              <h3 id="display-name" class="pet-display-name">-</h3>
+              <p class="pet-stat-line"><strong>Breed:</strong> <span id="display-breed">-</span></p>
+              <p class="pet-stat-line"><strong>Day:</strong> <span id="display-day">1</span></p>
+              <p class="pet-stat-line"><strong>Growth stage:</strong> <span id="display-stage">Puppy</span></p>
+              <p class="pet-stat-line"><strong>Happiness:</strong> <span id="display-happiness">50/100</span></p>
             </div>
           </div>
 
-          <!-- Happiness Gauge Bar -->
-          <div class="happiness-bar-container">
-            <div id="happiness-bar" class="happiness-bar"></div>
+          <!-- Visual Growth Progress Bar -->
+          <div class="growth-bar-wrapper">
+            <span class="bar-caption">Growth Stage Bar:</span>
+            <div class="growth-bar-container">
+              <div id="growth-bar" class="growth-bar"></div>
+            </div>
           </div>
 
-          <!-- Care Controls -->
+          <!-- Controls: Feed, Play, Next Day, Start Over -->
           <div class="pet-actions">
-            <button type="button" id="feed-btn" class="btn btn-secondary">Feed</button>
-            <button type="button" id="play-btn" class="btn btn-secondary">Play</button>
+            <button type="button" id="feed-btn" class="btn btn-action">Feed</button>
+            <button type="button" id="play-btn" class="btn btn-action">Play</button>
+            <button type="button" id="next-day-btn" class="btn btn-action">Next Day</button>
+            <button type="button" id="start-over-btn" class="btn btn-danger">Start Over</button>
           </div>
 
           <p id="pet-message" class="pet-message"></p>
