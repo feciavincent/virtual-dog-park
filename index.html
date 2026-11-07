@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Virtual Dog Park</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Page Header -->
+  <header class="site-header">
+    <div class="container">
+      <h1 class="site-title">Virtual Dog Park</h1>
+      <p class="site-welcome">Meet three breeds, then adopt and care for one virtual dog.</p>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- Dog Encyclopedia Section -->
+    <section id="encyclopedia" class="encyclopedia-section">
+      <div class="section-intro">
+        <h2>Dog Encyclopedia</h2>
+        <p>A quick field guide for future dog friends.</p>
+      </div>
+
+      <div class="breed-grid">
+        <!-- Beagle -->
+        <article class="breed-card">
+          <div class="illustration-container">
+            <img src="assets/beagle.svg" alt="Illustration of a Beagle">
+          </div>
+          <div class="breed-info">
+            <span class="breed-badge">DOG 01</span>
+            <h3 class="breed-name">Beagle</h3>
+            <div class="info-item">
+              <span class="label">SIZE</span>
+              <p>Small to medium</p>
+            </div>
+            <div class="info-item">
+              <span class="label">PERSONALITY</span>
+              <p>Curious, cheerful, and friendly</p>
+            </div>
+            <div class="info-item">
+              <span class="label">EVERYDAY CARE</span>
+              <p>Daily walks, play, and chances to sniff</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Golden Retriever -->
+        <article class="breed-card">
+          <div class="illustration-container">
+            <img src="assets/golden-retriever.svg" alt="Illustration of a Golden Retriever">
+          </div>
+          <div class="breed-info">
+            <span class="breed-badge">DOG 02</span>
+            <h3 class="breed-name">Golden Retriever</h3>
+            <div class="info-item">
+              <span class="label">SIZE</span>
+              <p>Large</p>
+            </div>
+            <div class="info-item">
+              <span class="label">PERSONALITY</span>
+              <p>Gentle, social, and eager to learn</p>
+            </div>
+            <div class="info-item">
+              <span class="label">EVERYDAY CARE</span>
+              <p>Exercise, company, and regular brushing</p>
+            </div>
+          </div>
+        </article>
+
+        <!-- Poodle -->
+        <article class="breed-card">
+          <div class="illustration-container">
+            <img src="assets/poodle.svg" alt="Illustration of a Poodle">
+          </div>
+          <div class="breed-info">
+            <span class="breed-badge">DOG 03</span>
+            <h3 class="breed-name">Poodle</h3>
+            <div class="info-item">
+              <span class="label">SIZE</span>
+              <p>Toy, miniature, or standard</p>
+            </div>
+            <div class="info-item">
+              <span class="label">PERSONALITY</span>
+              <p>Alert, clever, and active</p>
+            </div>
+            <div class="info-item">
+              <span class="label">EVERYDAY CARE</span>
+              <p>Training, exercise, and coat care</p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Mount point for Round 2 and Round 3 interactive features -->
+    <section id="virtual-dog-section" class="virtual-dog-section"></section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

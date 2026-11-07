@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect width="120" height="120" rx="16" fill="#eaf2ec" />
+  <!-- Ears -->
+  <ellipse cx="32" cy="62" rx="12" ry="24" fill="#8d5b32" transform="rotate(-15 32 62)" />
+  <ellipse cx="88" cy="62" rx="12" ry="24" fill="#8d5b32" transform="rotate(15 88 62)" />
+  <!-- Head Base -->
+  <circle cx="60" cy="60" r="32" fill="#f5dfc6" />
+  <!-- White Blaze -->
+  <path d="M 54 30 C 56 46, 64 46, 66 30 Z" fill="#ffffff" />
+  <!-- Muzzle -->
+  <ellipse cx="60" cy="70" rx="18" ry="14" fill="#ffffff" />
+  <!-- Nose -->
+  <ellipse cx="60" cy="64" rx="7" ry="5" fill="#2c2523" />
+  <!-- Eyes -->
+  <circle cx="49" cy="56" r="3.5" fill="#2c2523" />
+  <circle cx="71" cy="56" r="3.5" fill="#2c2523" />
+  <!-- Mouth & Tongue -->
+  <path d="M 55 72 Q 60 76 65 72" stroke="#2c2523" stroke-width="2" fill="none" stroke-linecap="round" />
+  <path d="M 57 74 Q 60 81 63 74 Z" fill="#e06377" />
+</svg>

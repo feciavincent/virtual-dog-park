@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <rect width="120" height="120" rx="16" fill="#eef3f8" />
+  <!-- Puffy Fur Trim -->
+  <circle cx="42" cy="36" r="13" fill="#e8e2d8" />
+  <circle cx="60" cy="30" r="14" fill="#e8e2d8" />
+  <circle cx="78" cy="36" r="13" fill="#e8e2d8" />
+  <circle cx="32" cy="54" r="13" fill="#e8e2d8" />
+  <circle cx="88" cy="54" r="13" fill="#e8e2d8" />
+  <!-- Face -->
+  <circle cx="60" cy="60" r="28" fill="#faf7f2" />
+  <!-- Muzzle -->
+  <ellipse cx="60" cy="70" rx="14" ry="10" fill="#e8e2d8" />
+  <!-- Nose -->
+  <ellipse cx="60" cy="64" rx="5.5" ry="4" fill="#222222" />
+  <!-- Eyes -->
+  <circle cx="51" cy="56" r="3" fill="#222222" />
+  <circle cx="69" cy="56" r="3" fill="#222222" />
+  <!-- Smile -->
+  <path d="M 56 71 Q 60 75 64 71" stroke="#222222" stroke-width="2" fill="none" stroke-linecap="round" />
+</svg>

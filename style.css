@@ -1,0 +1,137 @@
+/* Color Palette and Global Styles */
+:root {
+  --bg-color: #f7f5f0;
+  --card-bg: #fffdfa;
+  --text-main: #272422;
+  --text-muted: #6e6964;
+  --border-color: #e5dec9;
+  --accent-color: #bf673b;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  line-height: 1.5;
+  padding-bottom: 3rem;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 1.25rem;
+}
+
+/* Header */
+.site-header {
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.site-title {
+  font-family: Georgia, serif;
+  font-size: 2.25rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+
+.site-welcome {
+  color: var(--text-muted);
+  font-size: 1.05rem;
+}
+
+/* Section Heading */
+.section-intro {
+  margin-bottom: 1.5rem;
+}
+
+.section-intro h2 {
+  font-family: Georgia, serif;
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.section-intro p {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+/* Responsive Breed Grid */
+.breed-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Breed Card */
+.breed-card {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.illustration-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.illustration-container img {
+  width: 120px;
+  height: 120px;
+  display: block;
+}
+
+.breed-info {
+  padding: 1.25rem;
+}
+
+.breed-badge {
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+  color: var(--accent-color);
+  display: inline-block;
+  margin-bottom: 0.25rem;
+}
+
+.breed-name {
+  font-family: Georgia, serif;
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.info-item {
+  border-top: 1px solid var(--border-color);
+  padding: 0.55rem 0;
+}
+
+.label {
+  font-size: 0.7rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  letter-spacing: 0.05em;
+  display: block;
+  margin-bottom: 0.15rem;
+}
+
+.info-item p {
+  font-size: 0.9rem;
+}
+
+/* Responsive Fallback for Narrow Screens */
+@media (max-width: 600px) {
+  .breed-grid {
+    grid-template-columns: 1fr;
+  }
+}
